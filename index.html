@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>양평꽃게한상 | 따뜻한 밥상, 신선한 꽃게</title>
+<meta name="description" content="양평 쉬자파크 곁 꽃게장 한상 전문점 양평꽃게한상. 국내산 꽃게로 담근 간장게장·양념게장과 갓 지은 돌솥밥. 매주 화요일 휴무, 10:30~20:30.">
+<meta property="og:title" content="양평꽃게한상">
+<meta property="og:description" content="따뜻한 밥상, 신선한 꽃게 · 양평 쉬자파크 곁 꽃게장 한상">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/menu-ganjang.jpg">
+<meta name="theme-color" content="#24160d">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --hanji:#f3ebda;
+    --paper:#faf6ec;
+    --ink:#3b2416;        /* 로고 갈색 */
+    --ink-soft:#6e5544;
+    --muk:#22150c;        /* 먹색 */
+    --muk-2:#2e1d12;
+    --crab:#c8432a;       /* 로고 꽃게색 */
+    --crab-dark:#a83620;
+    --gold:#b08d57;
+    --gold-soft:#d8c193;
+    --line:rgba(176,141,87,.45);
+    --max:1140px;
+    --serif:"Noto Serif KR",serif;
+    --body:"Gowun Batang","Noto Serif KR",serif;
+    --hanji-tex:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .3 0 0 0 0 .18 0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    --lattice:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56'><g fill='none' stroke='%23b08d57' stroke-opacity='.09' stroke-width='1'><rect x='.5' y='.5' width='55' height='55'/><path d='M28 0v56M0 28h56'/><rect x='14' y='14' width='28' height='28'/></g></svg>");
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{margin:0;background:var(--hanji) var(--hanji-tex);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.85;-webkit-font-smoothing:antialiased;word-break:keep-all}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ───── 머리글 ───── */
+  header.top{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s,box-shadow .35s,border-color .35s;border-bottom:1px solid transparent}
+  header.top.scrolled{background:rgba(243,235,218,.94) var(--hanji-tex);backdrop-filter:blur(8px);border-bottom-color:var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand img{height:30px;width:auto}
+  .brand span{font-family:var(--serif);font-weight:900;font-size:20px;letter-spacing:.5px}
+  nav.menu{display:flex;gap:34px;font-family:var(--serif);font-size:15px;letter-spacing:2px}
+  nav.menu a{text-decoration:none;position:relative;padding:4px 0}
+  nav.menu a::after{content:"";position:absolute;left:50%;right:50%;bottom:-2px;height:1px;background:var(--crab);transition:.3s}
+  nav.menu a:hover::after{left:0;right:0}
+  .top-call{font-family:var(--serif);font-size:14px;letter-spacing:1px;text-decoration:none;border:1px solid var(--ink);padding:8px 16px;transition:.25s}
+  .top-call:hover{background:var(--ink);color:var(--paper)}
+
+  /* ───── 첫 화면 ───── */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 130px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:28px;border:1px solid var(--line);pointer-events:none}
+  .hero::after{content:"";position:absolute;inset:36px;border:1px solid rgba(176,141,87,.22);pointer-events:none}
+  .corner{position:absolute;width:46px;height:46px;border-color:var(--gold);border-style:solid;opacity:.8}
+  .corner.tl{top:20px;left:20px;border-width:2px 0 0 2px}
+  .corner.tr{top:20px;right:20px;border-width:2px 2px 0 0}
+  .corner.bl{bottom:20px;left:20px;border-width:0 0 2px 2px}
+  .corner.br{bottom:20px;right:20px;border-width:0 2px 2px 0}
+  .hero-inner{position:relative;z-index:1;max-width:760px}
+  .hero-logo{width:auto;height:min(370px,40vh);max-width:82vw;object-fit:contain;margin:0 auto 30px}
+  .hero-sub{font-family:var(--serif);font-size:clamp(16px,2vw,19px);letter-spacing:2px;color:var(--ink-soft);margin:0 0 36px;line-height:2}
+  .hero-sub b{color:var(--ink);font-weight:700}
+  .vtext{position:absolute;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--serif);font-size:15px;letter-spacing:10px;color:var(--ink-soft);display:flex;align-items:center;gap:18px}
+  .vtext::before,.vtext::after{content:"";width:1px;height:60px;background:var(--gold)}
+  .vtext.left{left:70px}
+  .vtext.right{right:70px}
+  .btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:168px;padding:15px 26px;font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:2px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:.25s;background:none}
+  .btn-red{background:var(--crab);color:#fff;border-color:var(--crab)}
+  .btn-red:hover{background:var(--crab-dark);border-color:var(--crab-dark)}
+  .btn-ink{border-color:var(--ink);color:var(--ink)}
+  .btn-ink:hover{background:var(--ink);color:var(--paper)}
+  .status{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-size:15px;color:var(--ink-soft)}
+  .status .dot{width:8px;height:8px;border-radius:50%;background:#5a9a62;box-shadow:0 0 0 4px rgba(90,154,98,.18)}
+  .status.closed .dot{background:var(--crab);box-shadow:0 0 0 4px rgba(200,67,42,.15)}
+  .scroll-cue{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:12px;letter-spacing:4px;color:var(--ink-soft);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scroll-cue::after{content:"";width:1px;height:42px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* ───── 섹션 제목 ───── */
+  section.block{padding:130px 0;position:relative}
+  .title{text-align:center;margin-bottom:64px}
+  .title .en{font-family:var(--serif);font-size:12px;letter-spacing:6px;color:var(--gold)}
+  .title h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4.2vw,44px);letter-spacing:2px;margin:10px 0 0;line-height:1.35}
+  .title .rule{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px}
+  .title .rule::before,.title .rule::after{content:"";width:56px;height:1px;background:var(--gold)}
+  .title .rule i{width:7px;height:7px;background:var(--crab);transform:rotate(45deg)}
+  .title p{color:var(--ink-soft);margin:22px 0 0}
+
+  /* ───── 소개 ───── */
+  .story{display:grid;grid-template-columns:auto 1fr;gap:80px;align-items:start;max-width:960px;margin:0 auto}
+  .story-v{writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;font-size:clamp(30px,3.6vw,40px);letter-spacing:12px;line-height:1.6;height:360px;border-left:1px solid var(--line);padding-left:26px;position:relative}
+  .story-v em{font-style:normal;color:var(--crab)}
+  .seal{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;background:var(--crab);color:#fff;font-family:var(--serif);font-weight:900;font-size:13px;line-height:1.15;letter-spacing:0;border-radius:4px;writing-mode:horizontal-tb;text-align:center;box-shadow:inset 0 0 0 3px var(--crab),inset 0 0 0 4px rgba(255,255,255,.55)}
+  .story-v .seal{position:absolute;bottom:-6px;left:-60px}
+  .story-text p{margin:0 0 20px;font-size:18px}
+  .story-text p.lead{font-family:var(--serif);font-size:clamp(20px,2.4vw,24px);line-height:1.8;color:var(--ink);margin-bottom:28px}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pillar{padding:28px 22px;text-align:center}
+  .pillar + .pillar{border-left:1px solid var(--line)}
+  .pillar .han{font-family:var(--serif);font-size:30px;color:var(--crab);font-weight:700;line-height:1}
+  .pillar h3{font-family:var(--serif);font-size:18px;margin:12px 0 6px;letter-spacing:1px}
+  .pillar p{margin:0;font-size:15px;color:var(--ink-soft);line-height:1.7}
+
+  /* ───── 먹색 섹션 (대표 메뉴) ───── */
+  .dark{background:var(--muk) var(--lattice);color:var(--paper)}
+  .dark .title .en{color:var(--gold-soft)}
+  .dark .title h2{color:var(--paper)}
+  .dark .title p{color:rgba(250,246,236,.65)}
+  .sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .sig{text-align:center}
+  .sig .frame{padding:10px;border:1px solid rgba(216,193,147,.35);margin-bottom:26px;transition:transform .5s}
+  .sig:hover .frame{transform:translateY(-6px)}
+  .sig .photo{aspect-ratio:1/1}
+  .sig .no{font-family:var(--serif);font-size:12px;letter-spacing:5px;color:var(--gold-soft)}
+  .sig h3{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:3px;margin:8px 0 6px}
+  .sig .price{font-family:var(--serif);color:#e8866d;font-size:17px;letter-spacing:1px}
+  .sig p{margin:12px auto 0;max-width:20em;font-size:15px;color:rgba(250,246,236,.7);line-height:1.75}
+
+  /* 사진 자리 (사진 받으면 <img>로 교체) */
+  .photo{position:relative;width:100%;overflow:hidden;background:linear-gradient(160deg,#3a2618,#22150c);display:flex;align-items:center;justify-content:center}
+  .photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+  .photo:hover img{transform:scale(1.04)}
+  .photo .ph{display:flex;flex-direction:column;align-items:center;gap:14px;color:rgba(216,193,147,.7);font-family:var(--serif);font-size:13px;letter-spacing:3px}
+  .photo .ph::before{content:"";width:92px;height:64px;background:url("images/crab-light.png") center/contain no-repeat;opacity:.35}
+  .photo.light{background:linear-gradient(160deg,#e9dcc2,#d9c6a2)}
+  .photo.light .ph{color:rgba(59,36,22,.55)}
+  .photo.light .ph::before{background-image:url("images/crab.png");opacity:.25}
+
+  /* ───── 차림표 ───── */
+  .board{max-width:980px;margin:0 auto;background:var(--paper) var(--hanji-tex);padding:16px;box-shadow:0 30px 60px -30px rgba(59,36,22,.35)}
+  .board-in{border:1px solid var(--gold);outline:1px solid var(--line);outline-offset:-8px;padding:60px 64px 54px;display:grid;grid-template-columns:1fr 1px 1fr;gap:56px;position:relative}
+  .board-in .divider{background:var(--line)}
+  .board-head{grid-column:1/-1;text-align:center;margin-bottom:-14px}
+  .board-head img{width:120px;margin:0 auto 6px}
+  .board-head h3{font-family:var(--serif);font-size:30px;letter-spacing:16px;margin:0;padding-left:16px}
+  .cat{font-family:var(--serif);font-size:20px;letter-spacing:6px;margin:0 0 6px;display:flex;align-items:center;gap:12px}
+  .cat .seal{width:34px;height:34px;font-size:12px;box-shadow:inset 0 0 0 2px var(--crab),inset 0 0 0 3px rgba(255,255,255,.55)}
+  .cat-note{font-size:14px;color:var(--ink-soft);margin:0 0 18px}
+  .sub-cat{font-family:var(--serif);font-size:15px;color:var(--crab);letter-spacing:3px;margin:26px 0 4px}
+  .items{list-style:none;margin:0;padding:0}
+  .items li{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid rgba(176,141,87,.18)}
+  .items li:last-child{border-bottom:0}
+  .items .n{font-family:var(--serif);font-size:18px;font-weight:600;letter-spacing:1px}
+  .items .n small{font-weight:400;font-size:14px;color:var(--ink-soft);margin-left:4px}
+  .items .d{flex:1;border-bottom:1px dotted rgba(59,36,22,.3);transform:translateY(-5px)}
+  .items .p{font-family:var(--serif);font-size:17px;white-space:nowrap}
+  .board-foot{grid-column:1/-1;text-align:center;font-size:14px;color:var(--ink-soft);margin-top:-10px}
+
+  /* ───── 공간 ───── */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:290px;gap:14px}
+  .gallery .photo{height:100%;margin:0}
+  .gallery .photo:first-child{grid-column:span 2}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 18px 14px;background:linear-gradient(transparent,rgba(34,21,12,.75));color:var(--paper);font-family:var(--serif);font-size:14px;letter-spacing:3px}
+
+  /* ───── 신메뉴 ───── */
+  .newmenu{display:grid;grid-template-columns:.85fr 1fr;gap:80px;align-items:center;max-width:1000px;margin:0 auto}
+  .new-photo .frame{padding:12px;border:1px solid var(--gold);background:var(--paper);box-shadow:0 30px 60px -28px rgba(34,21,12,.45)}
+  .new-photo img{width:100%}
+  .new-badge{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .new-badge .en{font-family:var(--serif);font-size:12px;letter-spacing:6px;color:var(--gold)}
+  .new-text h2{font-family:var(--serif);font-weight:900;font-size:clamp(34px,4.6vw,52px);letter-spacing:3px;margin:0 0 18px;line-height:1.25}
+  .new-lead{font-family:var(--serif);font-size:clamp(17px,2vw,20px);color:var(--ink-soft);margin:0 0 30px;line-height:1.9}
+  .new-set{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:2px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .new-set i{font-style:normal;color:var(--crab)}
+  .new-price{font-family:var(--serif);font-size:44px;font-weight:700;color:var(--crab);margin:20px 0 4px;letter-spacing:1px}
+  .new-price small{font-size:20px;margin-left:4px;color:var(--ink)}
+  .new-note{margin:0;color:var(--ink-soft);font-size:15px}
+  .items .tag{font-style:normal;font-family:var(--serif);font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;background:var(--crab);padding:2px 6px;margin-left:6px;vertical-align:3px}
+  .items .n small.desc{display:block;margin:2px 0 0}
+
+  /* ───── 오시는 길 ───── */
+  .visit{display:grid;grid-template-columns:1fr 1.15fr;gap:0;background:var(--paper);box-shadow:0 30px 60px -30px rgba(59,36,22,.3)}
+  .info{padding:56px 52px}
+  .info h3{font-family:var(--serif);font-size:24px;letter-spacing:3px;margin:0 0 28px;display:flex;align-items:center;gap:12px}
+  .info h3 img{height:26px}
+  .info dl{margin:0}
+  .info .row{display:grid;grid-template-columns:88px 1fr;padding:16px 0;border-top:1px solid var(--line)}
+  .info .row:last-child{border-bottom:1px solid var(--line)}
+  .info dt{font-family:var(--serif);font-size:14px;letter-spacing:3px;color:var(--gold);padding-top:2px}
+  .info dd{margin:0;font-size:17px}
+  .info dd small{display:block;font-size:14px;color:var(--ink-soft)}
+  .info dd a{text-decoration:none}
+  .info .off{color:var(--crab);font-weight:700}
+  .map-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+  .mb{font-family:var(--serif);font-size:14px;letter-spacing:1px;padding:10px 16px;border:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+  .mb:hover{border-color:var(--ink)}
+  .mb i{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .map{position:relative;min-height:460px;filter:sepia(.25) saturate(.85)}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ───── 문의 ───── */
+  .contact{background:var(--muk) var(--lattice);color:var(--paper);text-align:center;padding:110px 0}
+  .contact img{width:110px;margin:0 auto 26px}
+  .contact h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.6vw,36px);letter-spacing:3px;margin:0 0 14px}
+  .contact p{color:rgba(250,246,236,.7);margin:0 0 40px}
+  .contact .tel{display:block;font-family:var(--serif);font-size:clamp(30px,5vw,46px);letter-spacing:3px;text-decoration:none;color:var(--paper);margin-bottom:6px}
+  .contact .tel2{font-family:var(--serif);color:var(--gold-soft);text-decoration:none;letter-spacing:2px}
+  .contact .btns{margin-top:40px}
+  .contact .btn-ink{border-color:rgba(250,246,236,.5);color:var(--paper)}
+  .contact .btn-ink:hover{background:var(--paper);color:var(--muk)}
+
+  footer{background:#170e08;color:rgba(250,246,236,.55);font-size:14px;padding:56px 0 120px;text-align:center}
+  footer img{width:160px;margin:0 auto 22px;opacity:.9}
+  footer p{margin:3px 0}
+  footer .copy{margin-top:20px;font-size:12px;letter-spacing:2px;opacity:.7}
+
+  .mbar{display:none}
+  .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(16px);background:var(--muk);color:var(--paper);padding:11px 20px;font-size:14px;letter-spacing:1px;opacity:0;pointer-events:none;transition:.3s;z-index:100;font-family:var(--serif)}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* 등장 효과 */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+  .hero .reveal{transition-duration:1.4s}
+  .d1{transition-delay:.15s}.d2{transition-delay:.3s}.d3{transition-delay:.45s}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.scroll-cue::after{animation:none}html{scroll-behavior:auto}}
+
+  /* ───── 반응형 ───── */
+  @media (max-width:1000px){
+    .vtext{display:none}
+    .board-in{padding:48px 36px 44px;gap:40px}
+  }
+  @media (max-width:860px){
+    body{font-size:16px}
+    nav.menu{display:none}
+    header.top .wrap{height:62px}
+    .top-call{display:none}
+    .hero{padding:96px 20px 110px}
+    .hero::before{inset:14px}.hero::after{inset:20px}
+    .corner{width:30px;height:30px}
+    .corner.tl{top:8px;left:8px}.corner.tr{top:8px;right:8px}.corner.bl{bottom:8px;left:8px}.corner.br{bottom:8px;right:8px}
+    .scroll-cue{display:none}
+    .btn{min-width:0;flex:1 1 140px}
+    section.block{padding:90px 0}
+    .title{margin-bottom:46px}
+    .story{grid-template-columns:1fr;gap:36px}
+    .story-v{writing-mode:horizontal-tb;height:auto;border-left:0;padding-left:0;letter-spacing:3px;text-align:center;font-size:28px}
+    .story-v .seal{position:static;margin:16px auto 0;display:flex}
+    .story-text{text-align:center}
+    .pillars{grid-template-columns:1fr}
+    .pillar + .pillar{border-left:0;border-top:1px solid var(--line)}
+    .sig-grid{grid-template-columns:1fr;gap:56px;max-width:420px;margin:0 auto}
+    .sig .photo{aspect-ratio:4/3}
+    .board{padding:10px}
+    .board-in{grid-template-columns:1fr;padding:40px 22px 34px;gap:34px;outline-offset:-6px}
+    .board-in .divider{display:none}
+    .board-head h3{font-size:24px;letter-spacing:10px}
+    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px;gap:10px}
+    .gallery .photo:first-child{grid-column:1/-1;grid-row:span 1}
+    .gallery figcaption{font-size:12px;padding:24px 10px 8px;letter-spacing:2px}
+    .newmenu{grid-template-columns:1fr;gap:40px;text-align:center}
+    .new-photo{max-width:360px;margin:0 auto}
+    .new-badge,.new-set{justify-content:center}
+    .new-price{font-size:38px}
+    .visit{grid-template-columns:1fr}
+    .info{padding:40px 24px}
+    .map{min-height:320px}
+    .contact{padding:84px 0}
+    .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--muk);border-top:1px solid rgba(176,141,87,.4);padding-bottom:env(safe-area-inset-bottom)}
+    .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:17px 0;color:var(--paper);text-decoration:none;font-family:var(--serif);font-weight:600;letter-spacing:2px;font-size:16px}
+    .mbar a.call{background:var(--crab)}
+  }
+  @media (max-width:420px){
+    .wrap{padding:0 16px}
+    .items .n{font-size:16.5px}
+    .items .p{font-size:16px}
+    .info .row{grid-template-columns:76px 1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="top" id="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="양평꽃게한상 처음으로">
+      <img src="images/crab.png" alt="">
+      <span>양평꽃게한상</span>
+    </a>
+    <nav class="menu" aria-label="주요 메뉴">
+      <a href="#story">이야기</a>
+      <a href="#signature">대표 음식</a>
+      <a href="#new">신메뉴</a>
+      <a href="#menu">차림표</a>
+      <a href="#space">공간</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="top-call" href="tel:031-773-6711">031-773-6711</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 첫 화면 -->
+  <section class="hero">
+    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+    <div class="vtext left">양평 쉬자파크 곁</div>
+    <div class="vtext right">국내산 꽃게장 한상</div>
+    <div class="hero-inner">
+      <img class="hero-logo reveal" src="images/logo.png" alt="양평꽃게한상 — 따뜻한 밥상, 신선한 꽃게">
+      <p class="hero-sub reveal d1">국내산 꽃게로 정성껏 담근 <b>게장</b>과<br>갓 지어 올리는 <b>돌솥밥</b>, 한 상 가득 차려 드립니다.</p>
+      <div class="btns reveal d2">
+        <a class="btn btn-red" href="tel:031-773-6711">전화 문의</a>
+        <a class="btn btn-ink" href="#menu">차림표 보기</a>
+      </div>
+      <div class="status reveal d3" id="status"><span class="dot"></span><span id="statusText">10:30 – 20:30 · 화요일 휴무</span></div>
+    </div>
+    <div class="scroll-cue">SCROLL</div>
+  </section>
+
+  <!-- 이야기 -->
+  <section class="block" id="story">
+    <div class="wrap">
+      <div class="title reveal">
+        <div class="en">OUR STORY</div>
+        <h2>한 상에 담은 정성</h2>
+        <div class="rule"><i></i></div>
+      </div>
+      <div class="story">
+        <div class="story-v reveal">쉼이 있는 곳<br><em>양평꽃게한상</em><span class="seal">꽃게<br>한상</span></div>
+        <div class="story-text reveal d1">
+          <p class="lead">양평 10경 가운데 하나인 쉼과 휴식의 공간, 쉬자파크 곁에 자리하고 있습니다.</p>
+          <p>나들이 길에 잠시 들러 든든하게 배를 채우고 가셔도 좋고, 귀한 분들과 함께하는 모임 자리로도 손색이 없습니다.</p>
+          <p>국내산 꽃게로 담근 꽃게장과 갓 지은 따뜻한 돌솥밥으로 정갈한 한 상을 차려 드립니다.</p>
+          <div class="pillars">
+            <div class="pillar"><div class="han">01</div><h3>국내산 꽃게</h3><p>좋은 꽃게를 골라<br>정성껏 담급니다</p></div>
+            <div class="pillar"><div class="han">02</div><h3>따뜻한 돌솥밥</h3><p>주문과 함께<br>갓 지어 올립니다</p></div>
+            <div class="pillar"><div class="han">03</div><h3>정갈한 한 상</h3><p>나들이에도, 모임에도<br>넉넉하게 차립니다</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 대표 음식 -->
+  <section class="block dark" id="signature">
+    <div class="wrap">
+      <div class="title reveal">
+        <div class="en">SIGNATURE</div>
+        <h2>대표 음식</h2>
+        <div class="rule"><i></i></div>
+      </div>
+      <div class="sig-grid">
+        <article class="sig reveal">
+          <div class="frame">
+            <div class="photo"><img src="images/menu-ganjang.jpg" alt="국내산 꽃게로 담근 간장게장" loading="lazy"></div>
+          </div>
+          <div class="no">— 일 —</div>
+          <h3>간장게장정식</h3>
+          <div class="price">28,000원</div>
+          <p>국내산 꽃게로 담근 간장게장에 돌솥밥과 정갈한 찬을 곁들인 한 상</p>
+        </article>
+        <article class="sig reveal d1">
+          <div class="frame">
+            <div class="photo"><img src="images/menu-yangnyeom.jpg" alt="매콤달콤한 양념게장" loading="lazy"></div>
+          </div>
+          <div class="no">— 이 —</div>
+          <h3>양념게장정식</h3>
+          <div class="price">28,000원</div>
+          <p>매콤달콤한 양념게장에 돌솥밥과 정갈한 찬을 곁들인 한 상</p>
+        </article>
+        <article class="sig reveal d2">
+          <div class="frame">
+            <div class="photo"><div class="ph">사진 준비 중</div></div>
+          </div>
+          <div class="no">— 삼 —</div>
+          <h3>꽃게탕</h3>
+          <div class="price">中 65,000원 · 大 85,000원</div>
+          <p>꽃게를 넉넉히 넣어 시원하고 얼큰하게 끓여 낸 탕</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 신메뉴 -->
+  <section class="block" id="new">
+    <div class="wrap">
+      <div class="newmenu">
+        <div class="new-photo reveal">
+          <div class="frame"><img src="images/menu-donkatsu-poster.jpg" alt="경양식돈까스 — 돌솥밥과 수제돈까스" loading="lazy"></div>
+        </div>
+        <div class="new-text reveal d1">
+          <div class="new-badge"><span class="seal">신<br>메뉴</span><span class="en">NEW MENU</span></div>
+          <h2>경양식돈까스</h2>
+          <p class="new-lead">돈까스 위에 달달한 소스가 올라간,<br>경양식집에서 먹던 추억의 돈까스</p>
+          <div class="new-set">
+            <span>돌솥밥</span><i>+</i><span>수제돈까스</span>
+          </div>
+          <div class="new-price">13,000<small>원</small></div>
+          <p class="new-note">갓 지은 돌솥밥과 함께 차려 드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 차림표 -->
+  <section class="block" id="menu">
+    <div class="wrap">
+      <div class="title reveal">
+        <div class="en">MENU</div>
+        <h2>차림표</h2>
+        <div class="rule"><i></i></div>
+      </div>
+      <div class="board reveal">
+        <div class="board-in">
+          <div class="board-head">
+            <img src="images/crab.png" alt="">
+            <h3>차림표</h3>
+          </div>
+          <div>
+            <h4 class="cat"><span class="seal">식사</span>식사</h4>
+            <p class="cat-note">매장에서 드시는 차림</p>
+            <ul class="items">
+              <li><span class="n">간장게장정식</span><span class="d"></span><span class="p">28,000</span></li>
+              <li><span class="n">양념게장정식</span><span class="d"></span><span class="p">28,000</span></li>
+              <li><span class="n">돌솥정식</span><span class="d"></span><span class="p">11,000</span></li>
+              <li><span class="n">경양식돈까스 <em class="tag">NEW</em><small class="desc">돌솥밥 + 수제돈까스</small></span><span class="d"></span><span class="p">13,000</span></li>
+              <li><span class="n">뚝배기불고기</span><span class="d"></span><span class="p">12,000</span></li>
+              <li><span class="n">꽃게탕 <small>中</small></span><span class="d"></span><span class="p">65,000</span></li>
+              <li><span class="n">꽃게탕 <small>大</small></span><span class="d"></span><span class="p">85,000</span></li>
+            </ul>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <h4 class="cat"><span class="seal">포장</span>포장</h4>
+            <p class="cat-note">댁에서 즐기시는 꽃게장</p>
+            <div class="sub-cat">간장게장</div>
+            <ul class="items">
+              <li><span class="n">2마리</span><span class="d"></span><span class="p">50,000</span></li>
+              <li><span class="n">3마리</span><span class="d"></span><span class="p">70,000</span></li>
+              <li><span class="n">4마리</span><span class="d"></span><span class="p">90,000</span></li>
+            </ul>
+            <div class="sub-cat">양념게장</div>
+            <ul class="items">
+              <li><span class="n">600g</span><span class="d"></span><span class="p">60,000</span></li>
+              <li><span class="n">1.2kg</span><span class="d"></span><span class="p">90,000</span></li>
+            </ul>
+          </div>
+          <p class="board-foot">가격 단위 : 원</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 공간 -->
+  <section class="block" id="space" style="padding-top:20px">
+    <div class="wrap">
+      <div class="title reveal">
+        <div class="en">SPACE</div>
+        <h2>머무는 공간</h2>
+        <div class="rule"><i></i></div>
+      </div>
+      <div class="gallery reveal">
+        <figure class="photo"><img src="images/gallery-store.jpg" alt="양평꽃게한상 매장 외관" loading="lazy"><figcaption>매장 전경</figcaption></figure>
+        <figure class="photo"><img src="images/gallery-ganjang.jpg" alt="간장게장" loading="lazy"><figcaption>간장게장</figcaption></figure>
+        <figure class="photo"><img src="images/gallery-signs.jpg" alt="다녀가신 분들의 사인" loading="lazy"><figcaption>다녀가신 분들</figcaption></figure>
+        <figure class="photo"><img src="images/gallery-tv.jpg" alt="방송 출연 사진과 사인" loading="lazy"><figcaption>방송 출연</figcaption></figure>
+        <figure class="photo"><img src="images/gallery-donkatsu.jpg" alt="경양식돈까스와 돌솥밥" loading="lazy"><figcaption>경양식돈까스</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 오시는 길 -->
+  <section class="block" id="visit" style="padding-top:20px">
+    <div class="wrap">
+      <div class="title reveal">
+        <div class="en">LOCATION</div>
+        <h2>오시는 길</h2>
+        <div class="rule"><i></i></div>
+      </div>
+      <div class="visit reveal">
+        <div class="info">
+          <h3><img src="images/crab.png" alt="">이용 안내</h3>
+          <dl>
+            <div class="row"><dt>주소</dt><dd>경기 양평군 양평읍 양지길 52-16</dd></div>
+            <div class="row"><dt>영업</dt><dd>10:30 – 20:30<small>라스트오더 19:30 · 브레이크타임 없음</small></dd></div>
+            <div class="row"><dt>휴무</dt><dd class="off">매주 화요일</dd></div>
+            <div class="row"><dt>전화</dt><dd><a href="tel:031-773-6711">031-773-6711</a><small><a href="tel:0507-1323-6711">0507-1323-6711</a></small></dd></div>
+          </dl>
+          <div class="map-btns">
+            <button class="mb" id="copyAddr" type="button">주소 복사</button>
+            <a class="mb" href="https://naver.me/Fr7xpoVF" target="_blank" rel="noopener"><i style="background:#03c75a"></i>네이버 지도</a>
+            <a class="mb" href="https://map.kakao.com/link/search/경기 양평군 양평읍 양지길 52-16" target="_blank" rel="noopener"><i style="background:#f7d600"></i>카카오맵</a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="양평꽃게한상 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%96%91%EC%A7%80%EA%B8%B8%2052-16&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 -->
+  <section class="contact">
+    <div class="wrap reveal">
+      <img src="images/crab-light.png" alt="">
+      <h2>귀한 걸음, 정성으로 맞이하겠습니다</h2>
+      <p>10:30 – 20:30 (라스트오더 19:30) · 매주 화요일 휴무</p>
+      <a class="tel" href="tel:031-773-6711">031 · 773 · 6711</a>
+      <a class="tel2" href="tel:0507-1323-6711">0507-1323-6711</a>
+      <div class="btns">
+        <a class="btn btn-red" href="tel:031-773-6711">전화 문의</a>
+        <a class="btn btn-ink" href="#visit">오시는 길</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="images/logo-light.png" alt="양평꽃게한상">
+    <p>경기 양평군 양평읍 양지길 52-16</p>
+    <p>T. 031-773-6711 · 0507-1323-6711</p>
+    <!-- 사업자 정보 받으면 아래 줄 주석을 풀고 채우세요 -->
+    <!-- <p>대표 OOO · 사업자등록번호 000-00-00000</p> -->
+    <p class="copy">© 양평꽃게한상. ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="빠른 연결">
+  <a class="call" href="tel:031-773-6711">전화 문의</a>
+  <a href="#visit">오시는 길</a>
+</nav>
+
+<div class="toast" id="toast">주소가 복사되었습니다</div>
+
+<script>
+  // 머리글: 스크롤하면 배경 표시
+  (function(){
+    var h = document.getElementById('header');
+    var on = function(){ h.classList.toggle('scrolled', window.scrollY > 40); };
+    on(); window.addEventListener('scroll', on, {passive:true});
+  })();
+
+  // 등장 효과
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  // 오늘 영업 상태 (한국 시간 기준)
+  (function(){
+    try{
+      var now = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
+      var day = now.getDay(); // 0=일 … 2=화
+      var m = now.getHours()*60 + now.getMinutes();
+      var open = 10*60+30, last = 19*60+30, close = 20*60+30;
+      var chip = document.getElementById('status'), t = document.getElementById('statusText');
+      if(day === 2){ chip.classList.add('closed'); t.textContent = '오늘은 정기 휴무일입니다 (매주 화요일)'; }
+      else if(m < open){ chip.classList.add('closed'); t.textContent = '오늘 10:30에 문을 엽니다'; }
+      else if(m < last){ t.textContent = '지금 영업 중 · 라스트오더 19:30'; }
+      else if(m < close){ chip.classList.add('closed'); t.textContent = '라스트오더 마감 · 20:30 영업 종료'; }
+      else { chip.classList.add('closed'); t.textContent = (day === 1 ? '영업 종료 · 내일(화)은 휴무입니다' : '영업 종료 · 내일 10:30에 문을 엽니다'); }
+    }catch(e){}
+  })();
+
+  // 주소 복사
+  document.getElementById('copyAddr').addEventListener('click', function(){
+    var addr = '경기 양평군 양평읍 양지길 52-16';
+    var done = function(){ var el = document.getElementById('toast'); el.classList.add('show'); setTimeout(function(){ el.classList.remove('show'); }, 1800); };
+    if(navigator.clipboard){ navigator.clipboard.writeText(addr).then(done, function(){ prompt('주소를 복사하세요', addr); }); }
+    else { prompt('주소를 복사하세요', addr); }
+  });
+</script>
+</body>
+</html>
